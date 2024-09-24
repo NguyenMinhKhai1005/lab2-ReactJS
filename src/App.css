@@ -1,38 +1,295 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styles */
+.btn-search {
+  background-color: red; /* Màu nền đỏ */
+  color: white; /* Màu chữ trắng để dễ nhìn trên nền đỏ */
+  border: none; /* Loại bỏ viền (nếu cần) */
+  padding: 10px 15px; /* Thêm một chút khoảng cách bên trong nút */
+  border-radius: 5px; /* Tạo bo tròn góc nếu muốn */
+  cursor: pointer; /* Thay đổi con trỏ thành biểu tượng của nút */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.btn-search i {
+  color: white; /* Màu biểu tượng là màu trắng */
+} 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button.btn-search {
+  background-color: red !important; /* Sử dụng !important để đảm bảo màu đỏ được áp dụng */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  background-color: white;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-nav .nav-link {
+  color: white !important;
+}
+.navbar-nav .nav-link.active {
+  color: #f8f9fa !important; 
+}
+.navbar-collapse {
+  Color: white;
+}
+.navbar {
+  background-color: rgb(21, 19, 19);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-nav li {
+  display: inline;
+}
+
+.navbar-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-form input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.search-form button {
+  padding: 5px;
+  background-color: #f8b400;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/* Menu Section Styles */
+.menu .badge {
+  position: absolute;
+  top: 10px; /* Canh vị trí từ phía trên */
+  left: 10px; /* Canh vị trí từ phía trái */
+  background-color: yellow; /* Nền vàng */
+  color: black; /* Chữ màu đen */
+  padding: 5px 10px; /* Khoảng cách bên trong */
+  font-weight: bold;
+  font-size: 14px; /* Kích thước chữ */
+  border-radius: 5px; /* Bo góc */
+  z-index: 1; /* Đảm bảo nằm phía trên các phần tử khác */
+}
+
+.menu .card {
+  position: relative; /* Để thẻ .badge định vị dựa vào khối sản phẩm */
+}
+
+.menu .badge.sale {
+  background-color: yellow; /* Nền vàng cho "Sale" */
+}
+
+.menu .badge.new {
+  background-color: yellow; /* Nền vàng cho "New" */
+}
+
+
+
+.menu {
+  background-color: rgb(48, 43, 43); /* Màu nền đen */
+  padding: 50px 0; /* Khoảng cách padding trên và dưới */
+  color: white; /* Đổi màu chữ thành trắng để hiển thị rõ trên nền đen */
+}
+
+.menu h2 {
+  text-align: center;
+  color: white; /* Màu chữ tiêu đề là trắng */
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff; /* Màu nền của từng thẻ sản phẩm vẫn là màu trắng */
+  border: none; /* Loại bỏ đường viền của thẻ */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card-body {
+  color: black; /* Đổi màu chữ của phần thông tin sản phẩm thành đen */
+}
+
+
+.card {
+  position: relative;
+  width: 300px; /* Tăng kích thước chiều rộng của thẻ */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px; /* Điều chỉnh chiều cao của ảnh cho phù hợp */
+  object-fit: cover; /* Giữ tỷ lệ ảnh trong khung hình */
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card h5 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.card p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+}
+
+.sale {
+  background-color: red;
+}
+
+.new {
+  background-color: green;
+}
+
+.text-muted {
+  color: #999;
+  font-size: 14px;
+}
+
+.del {
+  text-decoration: line-through;
+}
+
+/* Định dạng nút Buy */
+.btn {
+  background-color: black !important; /* Nền đen */
+  color: white !important;            /* Chữ trắng */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Thêm hiệu ứng hover cho nút */
+.btn:hover {
+  background-color: #333 !important; /* Màu nền khi hover */
+  color: #f1f1f1 !important;         /* Màu chữ khi hover */
+}
+
+.discounted-price {
+  color: orange; /* Màu cam cho giá đã giảm */
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #cc5200;
+}
+
+
+
+/* Table Booking Section */
+.table-booking {
+  background-color: #444;
+  padding: 50px 20px;
+}
+
+.table-booking h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.booking-form textarea {
+  grid-column: span 3;
+}
+
+.booking-form button {
+  grid-column: span 3;
+  background-color: #f8b400;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
